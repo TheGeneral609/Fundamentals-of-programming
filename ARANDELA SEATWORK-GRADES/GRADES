@@ -1,0 +1,26 @@
+int main() {
+    int score;
+    printf("Enter the score (0-100): ");
+    scanf("%d", &score);
+    if (score < 0 || score > 100) {
+        printf("Invalid score. Please enter a value between 0 and 100.\n");
+        return 1;
+    }
+    switch (score / 10) {
+        case 10: // for score 100
+        case 9:
+            printf("Grade: A\n");
+            break;
+        case 8:
+            printf("Grade: B\n");
+            break;
+        case 7:
+        case 6:
+            printf("Grade: C\n");
+            break;
+        default:
+            printf("Grade: FAILED\n");
+            break;
+    }
+    return 0;
+}
