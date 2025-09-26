@@ -1,0 +1,314 @@
+1. Counter-Controlled Loops
+Ex.1 Print 1 to  10 numbers.
+  #include <iostream>
+  int main() {
+      int i = 1;
+      while (i <= 10) {
+          std::cout << i << " ";
+          i++;
+      }
+      return 0;
+  }
+  // Output: 1 2 3 4 5 6 7 8 9 10
+
+Ex.2 Sum of first 5 even numbers.
+#include <iostream>
+  int main() {
+      int sum = 0, i = 1;
+      while (i <= 5) {
+          sum += 2 * i;
+          i++;
+      }
+      std::cout << "Sum: " << sum << std::endl;  // Output: Sum: 30
+      return 0;
+  }
+  
+Ex. 3 Multiply numbers from 1 to 4 (factorial-like)
+#include <iostream>
+  int main() {
+      int product = 1, i = 1;
+      while (i <= 4) {
+          product *= i;
+          i++;
+      }
+      std::cout << "Product: " << product << std::endl;  // Output: Product: 24
+      return 0;
+  }
+  
+Ex. 4  Count down from 10 to 1.
+
+#include <iostream>
+  int main() {
+      int i = 10;
+      while (i >= 1) {
+          std::cout << i << " ";
+          i--;
+      }
+      return 0;
+  }
+  // Output: 10 9 8 7 6 5 4 3 2 1
+  
+Ex. 5 Print squares of first 3 numbers.
+#include <iostream>
+  int main() {
+      int i = 1;
+      while (i <= 3) {
+          std::cout << i * i << " ";
+          i++;
+      }
+      return 0;
+  }
+  // Output: 1 4 9
+  
+2. Sentinel-Controlled Loops
+Ex. 1  Sum numbers until 0 is entered.
+#include <iostream>
+  int main() {
+      int num, sum = 0;
+      std::cout << "Enter numbers (0 to stop): ";
+      std::cin >> num;
+      while (num != 0) {
+          sum += num;
+          std::cin >> num;
+      }
+      std::cout << "Sum: " << sum << std::endl;
+      return 0;
+  }
+  
+Ex.2 Count positive numbers until -1.
+#include <iostream>
+  int main() {
+      int num, count = 0;
+      std::cout << "Enter numbers (-1 to stop): ";
+      std::cin >> num;
+      while (num != -1) {
+          if (num > 0) count++;
+          std::cin >> num;
+      }
+      std::cout << "Positive count: " << count << std::endl;
+      return 0;
+  }
+
+Ex. 3  Find max number until "end" (simplified with string sentinel).
+  #include <iostream>
+  #include <string>
+  int main() {
+      std::string input;
+      int max = INT_MIN;
+      while (true) {
+          std::cout << "Enter number or 'end': ";
+          std::cin >> input;
+          if (input == "end") break;
+          int num = std::stoi(input);
+          if (num > max) max = num;
+      }
+      std::cout << "Max: " << max << std::endl;
+      return 0;
+  }
+  
+Ex, 4 Average of numbers until -999.
+#include <iostream>
+  int main() {
+      int num, count = 0;
+      double sum = 0;
+      std::cout << "Enter numbers (-999 to stop): ";
+      std::cin >> num;
+      while (num != -999) {
+          sum += num;
+          count++;
+          std::cin >> num;
+      }
+      std::cout << "Average: " << (count ? sum / count : 0) << std::endl;
+      return 0;
+  }
+
+Ex. 5  Accumulate even numbers until 99.
+#include <iostream>
+  int main() {
+      int num, sum = 0;
+      std::cout << "Enter numbers (99 to stop): ";
+      std::cin >> num;
+      while (num != 99) {
+          if (num % 2 == 0) sum += num;
+          std::cin >> num;
+      }
+      std::cout << "Even sum: " << sum << std::endl;
+      return 0;
+  }
+  
+3. For Loops
+Ex. 1 Print 1 to 5.
+#include <iostream>
+  int main() {
+      for (int i = 1; i <= 5; i++) {
+          std::cout << i << " ";
+      }
+      return 0;
+  }
+  // Output: 1 2 3 4 5
+  
+Ex. 2 Sum of 1 to 10.
+#include <iostream>
+  int main() {
+      int sum = 0;
+      for (int i = 1; i <= 10; i++) {
+          sum += i;
+      }
+      std::cout << "Sum: " << sum << std::endl;  // Output: Sum: 55
+      return 0;
+  }
+  
+Ex. 3 Print multiples of 3 up to 15.
+#include <iostream>
+  int main() {
+      for (int i = 3; i <= 15; i += 3) {
+          std::cout << i << " ";
+      }
+      return 0;
+  }
+  // Output: 3 6 9 12 15
+
+Ex. 4 Factorial of 5
+#include <iostream>
+  int main() {
+      int fact = 1;
+      for (int i = 1; i <= 5; i++) {
+          fact *= i;
+      }
+      std::cout << "Factorial: " << fact << std::endl;  // Output: Factorial: 120
+      return 0;
+  }
+  
+Ex.5 Reverse print 10 to 1.
+#include <iostream>
+  int main() {
+      for (int i = 10; i >= 1; i--) {
+          std::cout << i << " ";
+      }
+      return 0;
+  }
+  // Output: 10 9 8 7 6 5 4 3 2 1
+  
+4. While Loops
+Ex.1 Print 1 to 7 (counter-controlled).
+#include <iostream>
+  int main() {
+      int i = 1;
+      while (i <= 7) {
+          std::cout << i << " ";
+          i++;
+      }
+      return 0;
+  }
+  // Output: 1 2 3 4 5 6 7
+  
+Ex. 2 Read until empty string (sentinel).
+  #include <iostream>
+  #include <string>
+  int main() {
+      std::string input;
+      while (std::getline(std::cin, input) && !input.empty()) {
+          std::cout << "You entered: " << input << std::endl;
+      }
+      return 0;
+  }
+  
+Ex. 3 Countdown from 8.
+#include <iostream>
+  int main() {
+      int i = 8;
+      while (i > 0) {
+          std::cout << i << " ";
+          i--;
+      }
+      return 0;
+  }
+  // Output: 8 7 6 5 4 3 2 1
+
+Ex. 4 Sum odds until 9.
+#include <iostream>
+  int main() {
+      int sum = 0, i = 1;
+      while (i <= 9) {
+          sum += i;
+          i += 2;
+      }
+      std::cout << "Odd sum: " << sum << std::endl;  // Output: Odd sum: 25
+      return 0;
+  }
+
+Ex. 5 Validate input until positive
+#include <iostream>
+  int main() {
+      int num;
+      std::cout << "Enter positive number: ";
+      std::cin >> num;
+      while (num <= 0) {
+          std::cout << "Invalid, try again: ";
+          std::cin >> num;
+      }
+      std::cout << "Good: " << num << std::endl;
+      return 0;
+  }
+  
+5. Do-While Loops
+Example 1: Menu loop until 'q'.
+#include <iostream>
+  #include <string>
+  int main() {
+      std::string choice;
+      do {
+          std::cout << "Enter choice (q to quit): ";
+          std::cin >> choice;
+      } while (choice != "q");
+      return 0;
+  }
+  
+Ex. 2 Sum until 0 (at least one input).
+#include <iostream>
+  int main() {
+      int num, sum = 0;
+      do {
+          std::cout << "Enter number (0 to stop): ";
+          std::cin >> num;
+          if (num != 0) sum += num;
+      } while (num != 0);
+      std::cout << "Sum: " << sum << std::endl;
+      return 0;
+  }
+  
+Ex. 3 Guess a number (1-10) until correct.
+#include <iostream>
+  int main() {
+      int guess, secret = 7;
+      do {
+          std::cout << "Guess (1-10): ";
+          std::cin >> guess;
+      } while (guess != secret);
+      std::cout << "Correct!" << std::endl;
+      return 0;
+  }
+  
+Ex. 4 Print 1 to 4 (counter-controlled).
+#include <iostream>
+  int main() {
+      int i = 1;
+      do {
+          std::cout << i << " ";
+          i++;
+      } while (i <= 4);
+      return 0;
+  }
+  // Output: 1 2 3 4
+  
+Ex. 5 Validate age (at least 18).
+#include <iostream>
+  int main() {
+      int age;
+      do {
+          std::cout << "Enter age (>=18): ";
+          std::cin >> age;
+      } while (age < 18);
+      std::cout << "Valid age: " << age << std::endl;
+      return 0;
+  }
