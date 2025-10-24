@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int initial = 0;
+    int max = 10;
+    for (int i = initial; i <= max; i += 2) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
