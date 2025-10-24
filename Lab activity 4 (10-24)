@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int start = 10;
+    int end = 100;
+    int step = 10;
+    for (int num = start; num <= end; num += step) {
+       printf("%d\n,num");
+    }
+    return 0;
+}
