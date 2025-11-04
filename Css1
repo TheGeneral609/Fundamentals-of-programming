@@ -1,0 +1,84 @@
+/* General Body and Background Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background fallback */
+    color: #333;
+    /* Optional: Use your preferred background image */
+    /* background-image: url('images/your_bg_image.jpg'); */
+    /* background-size: cover; */
+}
+
+/* Container to center content */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header/Title Styling */
+h1, h2 {
+    text-align: center;
+    color: #0056b3; /* Blue heading color */
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Navigation Links Styling (to mimic the required look) */
+.nav-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav-links a {
+    display: block; /* Makes the links take up the full width for easier clicking */
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Special styling for the required Home Page links */
+.home-link-box {
+    text-align: left;
+    margin-top: 15px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.home-link-box a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 5px;
+}
+
+.home-link-box a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Content Styling for Prelim/Midterm pages */
+.topic-section {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.topic-section ul {
+    list-style-type: decimal;
+}
+
+.lab-list {
+    list-style-type: none;
+    padding-left: 0;
+}
