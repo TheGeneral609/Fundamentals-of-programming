@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Topics Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Midterm Topic Page:</h1>
+        
+        <h2>Midterm Topics</h2>
+        
+        <div class="topic-section">
+            <h3>Lecture:</h3>
+            <ol>
+                <li>Topic 1</li>
+                <li>Topic 2</li>
+                <li>Topic 3</li>
+            </ol>
+            
+            <h3>Laboratory:</h3>
+            <ul class="lab-list">
+                <li>1. [Laboratory Topic 1]</li>
+                </ul>
+        </div>
+        
+        <hr>
+
+        <div class="home-link-box">
+            &lt;&lt; <a href="index.html">Home</a>
+            <a href="prelim_topics.html" style="float: left;">&lt;&lt; Prelim Topics</a> 
+            <div style="clear: both;"></div> </div>
+    </div>
+</body>
+</html>
