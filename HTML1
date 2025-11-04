@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Introduction to Computing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styling for the Home Page box */
+        .home-layout-box {
+            width: 300px; /* Adjust size as needed */
+            margin: 20px auto;
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ITGL11C - Introduction to Computing</h1>
+        <h2>Laboratory Midterm Exam</h2>
+        
+        <div class="home-layout-box">
+            <p><strong>Name:</strong> [Your Full Name]</p>
+            <p><strong>Section:</strong> [Your Section]</p>
+            <hr>
+            
+            <div class="nav-links">
+                <a href="prelim_topics.html">Prelim Topics</a>
+                <a href="midterm_topics.html">Midterm Topics</a>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px;">
+            <small>Create your simple webpage as required.</small>
+        </p>
+    </div>
+</body>
+</html>
+
+
